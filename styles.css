@@ -1,0 +1,166 @@
+body {
+    font-family: 'Courier New', monospace; /* Typewriter style */
+    background-color: #B9C6D6; /* Wild Yonder Blue */
+    color: #000;
+    text-align: center;
+}
+
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F1F8E9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#passcode-input {
+    margin-bottom: 20px;
+}
+
+#passcode {
+    width: 80%;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #80deea;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+#number-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.number-button, #enter-button, #clear-button {
+    padding: 20px;
+    font-size: 18px;
+    border: 2px solid #808dc8;
+    border-radius: 5px;
+    background-color: #d3d3f8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 50px; /* Set a consistent height */
+}
+
+.number-button:hover, #enter-button:hover, #clear-button:hover {
+    background-color: #91a1ca;
+}
+
+#clear-button {
+    background-color: #ef5350;
+    color: white;
+}
+
+#enter-button {
+    background-color: #66bb6a;
+    color: white;
+}
+
+#open-gift {
+    padding: 10px 20px;
+    font-size: 22px;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#open-gift:hover {
+    background-color: #388e3c;
+}
+
+#letter-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body {
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    position: relative; /* Set position for absolute children */
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    position: relative; /* Set position for absolute children */
+}
+
+.fairy-lights {
+    position: absolute;
+    top: 0; /* Position at the top */
+    width: 100%; /* Full width for connected effect */
+    display: flex;
+    justify-content: center; /* Center align lights */
+    z-index: 10; /* Ensure it's on top */
+}
+
+.light {
+    width: 30px; /* Increased width for the lights */
+    height: 30px; /* Increased height for the lights */
+    border-radius: 50%;
+    margin: 0 5px; /* Space between lights */
+    animation: blink 1s infinite alternate; /* Blinking effect */
+}
+
+.light:nth-child(odd) {
+    background-color: #9FB6D8; /* Slightly darker blue for odd lights */
+}
+
+.light:nth-child(even) {
+    background-color: #D4E0F1; /* Slightly lighter blue for even lights */
+}
+
+.string {
+    height: 8px; /* Height of the string, increased for visibility */
+    background-color: #4f6990; /* Wild Yonder Blue */
+    position: absolute; /* Position the string absolutely */
+    z-index: 10; /* Behind lights */
+    top: 50%; /* Center vertically with lights */
+    width: 100%; /* Full width for the string */
+}
+
+.left-lights {
+    left: 0;
+    transform: rotate(-10deg); /* Slight curve to the left */
+}
+
+.right-lights {
+    right: 0;
+    transform: rotate(10deg); /* Slight curve to the right */
+}
+
+@keyframes blink {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* For a rounded curve effect, we can create a pseudo-element */
+.curve {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%; /* To cover the width */
+    height: 0px; /* Height of the curve */
+    border-radius: 100%; /* Make it curved */
+    background-color: #B7C9E4; /* Wild Yonder Blue */
+    transform: translateX(-70%); /* Center it */
+    z-index: 1; /* Behind lights */
+}
+.birthday-text {
+    position: relative; /* Position relative for stacking context */
+    text-align: center; /* Center the text */
+    font-size: 2em; /* Size of the text */
+    color:#000; /* Text color */
+    z-index: 12; /* Ensure it's above the lights */
+    margin-top: 100px; /* Adjust margin to position below the lights */
+}
